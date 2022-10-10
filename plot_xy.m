@@ -5,6 +5,5 @@ function plot_xy(x,y,fig_name,time,low,high)
     xlim([x(1) x(end)])
     ylim([low high])
     title(['xy data at time t = ',num2str(time)])
-    refreshdata(h)
     drawnow;
 end

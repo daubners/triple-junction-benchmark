@@ -79,8 +79,8 @@ function [Ftot,TP_x,TP_y,max_GB,h_GB,L2,ghost] = calc_metrics_steadyState(gradie
     % xlim([x(1) x(end)])
     % title(['Boundary profile'])
     % hold on
-    %     h1=plot(iso_ab(1,:),iso_ab(2,:)- max_GB,'blue');
-    %     h2=plot(iso_ac(1,:),iso_ac(2,:)- max_GB,'green');
+    %     h1=plot(iso_ab(1,:),iso_ab(2,:)- max_GB,'b');
+    %     h2=plot(iso_ac(1,:),iso_ac(2,:)- max_GB,'g');
     %     h3=plot(shape_numeric(1,:),shape_numeric(2,:)-max_GB,'black');
     %     plot(x(2:params.nx-1), y_numeric, '.', 'markersize', 8);
     % hold off
@@ -98,10 +98,10 @@ function [Ftot,TP_x,TP_y,max_GB,h_GB,L2,ghost] = calc_metrics_steadyState(gradie
     xlabel('x-axis')
     ylabel('y-axis')
     hold on
-        h1=contour(x,y,(phia-phib).',[0.0,0.0],'blue',LineWidth=2);
-        h2=contour(x,y,(phia-phic).',[0.0,0.0],'red',LineWidth=2);
-        h3=contour(x,y,(phib-phic).',[0.0,0.0],'green',LineWidth=2);
-        plot(TP_x,TP_y,'v','MarkerSize',10,'MarkerEdgeColor','black');
+        h1=contour(x,y,(phia-phib).',[0.0,0.0],'b',LineWidth=2);
+        h2=contour(x,y,(phia-phic).',[0.0,0.0],'r',LineWidth=2);
+        h3=contour(x,y,(phib-phic).',[0.0,0.0],'g',LineWidth=2);
+        plot(TP_x,TP_y,'v','MarkerSize',10,'MarkerEdgeColor','k');
     hold off
     drawnow;
     

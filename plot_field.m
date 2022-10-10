@@ -12,7 +12,7 @@ function plot_field(field,fig_name,time,dx,dy)
     axis([0 Lx 0 Ly]);
     shading interp;
     colorbar;
-    colormap turbo; %parula; %turbo; hot; spring; summer; gray;
+    colormap viridis %turbo; %parula; %turbo; hot; spring; summer; gray;
     title({['Field solution at time t = ',num2str(time)]})
     xlabel('x-axis')
     ylabel('y-axis')
